@@ -32,37 +32,41 @@
 	const form = $('#feedback-form');
 
 	// Include all the existing search params
-	for (const [key, val] of params) {
+	for (const [key, value] of params) {
 		if (key === 'nameField') {
-			form.find('[name="name"]').val(val);
+			form.find('[name="name"]').val(value);
 			continue;
 		}
 
 		if (key === 'emailField') {
-			form.find('[name="email"]').val(val);
+			form.find('[name="email"]').val(value);
 			continue;
 		}
 
 		if (key === 'messageField') {
-			form.find('[name="message"]').val(val).get(0).setSelectionRange(0, 0);
+			form.find('[name="message"]').val(value).get(0).setSelectionRange(0, 0);
 			continue;
 		}
 
 		if (key === 'extraInfo') {
-			form.prepend(
-				$(`<textarea style="display:none" readonly name="${key}"></textarea>`).text(val)
+			form.append(
+				$(`<textarea style="display:none" readonly name="${key}"></textarea>`).text(value)
 			);
 			continue;
 		}
 
-		form.prepend(`<input type="hidden" name="${key}" value="${val}">`);
+		form.append(
+			$(`<input type="hidden" name="${key}">`).val(value)
+		);
 	}
 
 	form.on('submit', () => {
 		const product = params.has('product') ? (' · ' + params.get('product')) : '';
 		const message = form.find('[name="message"]').val().slice(0, 100);
 		const subject = `Feedback${product} - ${message}`;
-		form.prepend(`<input type="hidden" name="_subject" value="${subject}">`);
+		form.prepend(
+			$(`<input type="hidden" name="_subject">`).val(subject)
+		);
 	});
 })();
 
