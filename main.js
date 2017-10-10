@@ -61,9 +61,11 @@
 	}
 
 	form.on('submit', () => {
-		const product = params.has('product') ? (' · ' + params.get('product')) : '';
+		// Note: Intentionally not using template strings
+		// here as CloudFlare removes space inside them...
+		const product = params.has('product') ? (': ' + params.get('product')) : '';
 		const message = form.find('[name="message"]').val().slice(0, 100);
-		const subject = `Feedback${product} - ${message}`;
+		const subject = 'Feedback' + product + ' - ' + message;
 		form.prepend(
 			$(`<input type="hidden" name="_subject">`).val(subject)
 		);
