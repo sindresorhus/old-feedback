@@ -33,6 +33,11 @@
 
 	// Include all the existing search params
 	for (const [key, val] of params) {
+		if (key === 'message') {
+			form.find('[name="message"]').val(val);
+			continue;
+		}
+
 		form.append(`<input type="hidden" name="${key}" value="${val}">`);
 	}
 
