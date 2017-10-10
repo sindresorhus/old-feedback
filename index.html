@@ -4,10 +4,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Feedback · Sindre Sorhus</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
 		<link rel="stylesheet" href="main.css">
 		<link rel="icon" href="/favicon.png" sizes="32x32">
-		<script defer src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+		<!--<script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>-->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 		<script defer src="main.js"></script>
 		<!-- Google Analytics -->
 		<script>
@@ -15,35 +16,42 @@
 			ga('create', 'UA-25562592-1', 'auto');
 			ga('send', 'pageview');
 		</script>
-		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<script defer src="https://www.google-analytics.com/analytics.js"></script>
 		<!-- / Google Analytics -->
 	</head>
 	<body>
-		<section class="hero is-fullheight is-default is-bold">
+		<div id="nav-container"></div>
+		<section class="hero is-fullheight">
 			<div class="hero-body">
 				<div class="container">
 					<div class="columns is-vcentered">
 						<div id="main" class="column is-half is-centered has-nice-link">
-							<h1 class="title is-2">Feedback<span></span></h1>
-							<h2 class="title is-4">I appreciate your feedback 🌈</h2>
+							<h1 class="title is-2">Feedback</h1>
+							<h2 class="title is-6">I appreciate your feedback 🙌</h2>
 							<form id="feedback-form" action="https://formspree.io/sindresorhus@gmail.com" method="post">
 								<input type="hidden" name="_next" value="https://sindresorhus.com/feedback/?success">
-								<label class="label">Name</label>
-								<p class="control">
-									<input class="input" type="text" name="name">
-								</p>
-								<label class="label">Email*</label>
-								<p class="control">
-									<input class="input" type="email" name="email" required>
-								</p>
-								<label class="label">Message*</label>
-								<p class="control">
-									<textarea class="textarea" placeholder="I'm a human. Please be nice." name="message" minlength="20" required autofocus></textarea>
-								</p>
-								<div class="control is-grouped">
-									<p class="control">
-										<button class="button is-primary is-large" type="submit">Send Feedback</button>
-									</p>
+								<div class="field">
+									<label class="label">Name</label>
+									<div class="control">
+										<input class="input is-medium" type="text" name="name">
+									</div>
+								</div>
+								<div class="field">
+									<label class="label">Email*</label>
+									<div class="control">
+										<input class="input is-medium" type="email" name="email" required>
+									</div>
+								</div>
+								<div class="field">
+									<label class="label">Message*</label>
+									<div class="control">
+										<textarea class="textarea is-medium" placeholder="I'm a human. Please be nice." name="message" minlength="20" rows="7" required autofocus></textarea>
+									</div>
+								</div>
+								<div class="field">
+									<div class="control">
+										<button class="button is-large is-primary is-info" type="submit">Send Feedback</button>
+									</div>
 								</div>
 							</form>
 						</div>
