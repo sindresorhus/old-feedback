@@ -48,6 +48,13 @@
 			continue;
 		}
 
+		if (key === 'extraInfo') {
+			form.prepend(
+				$(`<textarea style="display:none" readonly name="${key}"></textarea>`).text(val)
+			);
+			continue;
+		}
+
 		form.prepend(`<input type="hidden" name="${key}" value="${val}">`);
 	}
 
