@@ -44,7 +44,7 @@
 		}
 
 		if (key === 'messageField') {
-			form.find('[name="message"]').val(val);
+			form.find('[name="message"]').val(val).get(0).setSelectionRange(0, 0);
 			continue;
 		}
 
