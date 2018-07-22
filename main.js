@@ -75,7 +75,7 @@
 // For the imported navbar
 (() => {
 	// Burger menu toggle
-	$(document).on('click', '.nav-toggle', () => {
-		$('.nav-toggle, .nav-menu').toggleClass('is-active');
+	$(document).on('click', '.navbar-burger', () => {
+		$('.navbar-burger, .navbar-menu').toggleClass('is-active');
 	});
 })();
