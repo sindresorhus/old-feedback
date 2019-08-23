@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Feedback · Sindre Sorhus</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
 		<link rel="stylesheet" href="main.css">
 		<link rel="icon" href="/favicon.png" sizes="32x32">
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
 		<script defer src="main.js"></script>
 		<!-- Google Analytics -->
 		<script>
@@ -30,19 +30,19 @@
 							<form id="feedback-form" action="https://formspree.io/sindresorhus@gmail.com" method="post">
 								<input type="hidden" name="_next" value="https://sindresorhus.com/feedback/?success">
 								<div class="field">
-									<label class="label">Name</label>
+									<label class="label" for="name">Name</label>
 									<div class="control">
 										<input class="input is-medium" type="text" name="name">
 									</div>
 								</div>
 								<div class="field">
-									<label class="label">Email*</label>
+									<label class="label" for="email">Email*</label>
 									<div class="control">
 										<input class="input is-medium" type="email" name="email" required>
 									</div>
 								</div>
 								<div class="field">
-									<label class="label">Message*</label>
+									<label class="label" for="message">Message*</label>
 									<div class="control">
 										<textarea class="textarea is-medium" placeholder="I'm a human. Please be nice." name="message" minlength="20" rows="7" required autofocus></textarea>
 									</div>
