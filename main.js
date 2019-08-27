@@ -1,13 +1,8 @@
 /* eslint-env browser, jquery */
+
+window.sk=window.sk||function(){(sk.q=sk.q||[]).push(arguments)};
+
 (() => {
-	if (window.location.search === '?success') {
-		$('#main').html('<h1 class="title is-2">Thanks for the feedback!</h1><p>You will now be redirected to my website.');
-
-		setTimeout(() => {
-			window.location.href = 'https://sindresorhus.com';
-		}, 3000);
-	}
-
 	// Borrow the navbar from the main site
 	$('#nav-container').load('https://sindresorhus.com/contact .hero-head', () => {
 		$('#nav-container').toggleClass('visible');
@@ -60,15 +55,26 @@
 		);
 	}
 
-	form.on('submit', () => {
+	const getSubject = () => {
 		// Note: Intentionally not using template strings
 		// here as CloudFlare removes space inside them...
 		const product = params.has('product') ? (': ' + params.get('product')) : '';
 		const message = form.find('[name="message"]').val().slice(0, 100);
-		const subject = 'Feedback' + product + ' - ' + message;
-		form.prepend(
-			$(`<input type="hidden" name="_subject">`).val(subject)
-		);
+		return 'Feedback' + product + ' - ' + message;
+	};
+
+	sk('form', '#feedback-form', {
+		id: '374a60e0f07a',
+		data: {
+			_subject: getSubject
+		},
+		onSuccess() {
+			$('#main').html('<h1 class="title is-2">Thanks for the feedback!</h1><p>You will now be redirected to my website.');
+
+			setTimeout(() => {
+				window.location.href = 'https://sindresorhus.com';
+			}, 3000);
+		}
 	});
 })();
 

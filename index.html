@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="main.css">
 		<link rel="icon" href="/favicon.png" sizes="32x32">
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+		<script defer src="https://js.statickit.com/statickit.js"></script>
 		<script defer src="main.js"></script>
 		<!-- Google Analytics -->
 		<script>
@@ -27,8 +28,10 @@
 						<div id="main" class="column is-half is-centered has-nice-link">
 							<h1 class="title is-2">Feedback</h1>
 							<h2 class="title is-6">I appreciate your feedback 🙌</h2>
-							<form id="feedback-form" action="https://formspree.io/sindresorhus@gmail.com" method="post">
-								<input type="hidden" name="_next" value="https://sindresorhus.com/feedback/?success">
+							<small><a href="sindresorhus@gmail.com">Email me</a> if you're having problems with the form.</small>
+							<br>
+							<br>
+							<form id="feedback-form">
 								<div class="field">
 									<label class="label" for="name">Name</label>
 									<div class="control">
@@ -40,12 +43,14 @@
 									<div class="control">
 										<input class="input is-medium" type="email" name="email" required>
 									</div>
+									<div data-sk-error="email"></div>
 								</div>
 								<div class="field">
 									<label class="label" for="message">Message*</label>
 									<div class="control">
 										<textarea class="textarea is-medium" placeholder="I'm a human. Please be nice." name="message" minlength="20" rows="7" required autofocus></textarea>
 									</div>
+									<div data-sk-error="message"></div>
 								</div>
 								<div class="field">
 									<div class="control">
