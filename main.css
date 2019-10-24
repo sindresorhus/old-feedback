@@ -39,6 +39,11 @@ a {
 	margin-bottom: 100px;
 }
 
+#additional-info {
+	display: none;
+	padding-bottom: 20px;
+}
+
 #feedback-form .required:invalid {
 	border-color: #ff3860;
 }

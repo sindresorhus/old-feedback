@@ -19,9 +19,30 @@ window.sk=window.sk||function(){(sk.q=sk.q||[]).push(arguments)};
 	const params = new URL(location.href).searchParams;
 
 	if (params.has('product')) {
-		const title = `Feedback for ${params.get('product')}`;
+		const product = params.get('product');
+		const title = `Feedback for ${product}`;
 		$('#main h1').text(title);
 		$('title').text(title);
+
+		if (product === 'Gifski') {
+			const searchParams = new URLSearchParams();
+			searchParams.append('body', `
+<!--
+Provide your feedback below. Include as many details as possible.
+-->
+
+
+
+---
+${params.get('metadata') || ''}
+			`.trim());
+
+			const url = `https://github.com/sindresorhus/Gifski/issues/new?${searchParams}`;
+
+			$('#additional-info').show().html(`
+				If you're on GitHub, <a href="${url}">open an issue on the repo</a> instead.
+			`);
+		}
 	}
 
 	const form = $('#feedback-form');
