@@ -39,9 +39,25 @@ a {
 	margin-bottom: 100px;
 }
 
+#app-icon {
+	display: none;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+h1,
+h2,
+#additional-info {
+	text-align: center;
+}
+
 #additional-info {
 	display: none;
 	padding-bottom: 20px;
+}
+
+#feedback-form {
+	padding-top: 20px;
 }
 
 #feedback-form .required:invalid {

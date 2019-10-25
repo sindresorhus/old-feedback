@@ -3,6 +3,20 @@
 window.sk=window.sk||function(){(sk.q=sk.q||[]).push(arguments)};
 
 (() => {
+	const icons = {
+		'Dato': 'https://sindresorhus.com/assets/dato/icon.png',
+		'Gifski': 'https://sindresorhus.com/assets/gifski/icon.png',
+		'Kap': 'https://sindresorhus.com/assets/kap/icon.png',
+		'Black Out': 'https://sindresorhus.com/assets/black-out/icon.png',
+		'HEIC Converter': 'https://sindresorhus.com/assets/heic-converter/icon.png',
+		'Shareful': 'https://sindresorhus.com/assets/shareful/icon.png',
+		'Lungo': 'https://sindresorhus.com/assets/lungo/icon.png',
+		'Touch Bar Simulator': 'https://sindresorhus.com/touch-bar-simulator/assets/images/logo.png',
+		'Battery Indicator': 'https://sindresorhus.com/assets/battery-indicator/icon.png',
+		'Caprine': 'https://sindresorhus.com/caprine/images/Icon.png',
+		'Blear': 'https://sindresorhus.com/assets/blear/icon.png',
+	};
+
 	// Borrow the navbar from the main site
 	$('#nav-container').load('https://sindresorhus.com/contact .hero-head', () => {
 		$('#nav-container').toggleClass('visible');
@@ -23,6 +37,10 @@ window.sk=window.sk||function(){(sk.q=sk.q||[]).push(arguments)};
 		const title = `Feedback for ${product}`;
 		$('#main h1').text(title);
 		$('title').text(title);
+
+		if (icons[product]) {
+			$('#app-icon').css('display', 'flex').attr('src', icons[product]);
+		}
 
 		if (product === 'Gifski') {
 			const searchParams = new URLSearchParams();
