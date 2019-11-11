@@ -1,0 +1,24 @@
+{
+	"forms": {
+		"feedback": {
+			"name": "Feedback",
+			"actions": {
+				"email": [
+					{
+						"to": "sindresorhus@gmail.com"
+					}
+				]
+			},
+			"fields": {
+				"email": {
+					"type": "email",
+					"required": true
+				},
+				"message": {
+					"type": "text",
+					"required": true
+				}
+			}
+		}
+	}
+}
