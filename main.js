@@ -17,6 +17,11 @@ window.sk=window.sk||function(){(sk.q=sk.q||[]).push(arguments)};
 		'Blear': 'https://sindresorhus.com/assets/blear/icon.png',
 	};
 
+	const repoUrls = {
+		'Gifski': 'https://github.com/sindresorhus/Gifski',
+		'Shareful': 'https://github.com/sindresorhus/Shareful'
+	};
+
 	// Borrow the navbar from the main site
 	$('#nav-container').load('https://sindresorhus.com/contact .hero-head', () => {
 		$('#nav-container').toggleClass('visible');
@@ -35,6 +40,7 @@ window.sk=window.sk||function(){(sk.q=sk.q||[]).push(arguments)};
 	if (params.has('product')) {
 		const product = params.get('product');
 		const title = `Feedback for ${product}`;
+
 		$('#main h1').text(title);
 		$('title').text(title);
 
@@ -42,7 +48,8 @@ window.sk=window.sk||function(){(sk.q=sk.q||[]).push(arguments)};
 			$('#app-icon').css('display', 'flex').attr('src', icons[product]);
 		}
 
-		if (product === 'Gifski') {
+		if (product in repoUrls) {
+			const repoUrl = repoUrls[product];
 			const searchParams = new URLSearchParams();
 			searchParams.append('body', `
 <!--
@@ -55,10 +62,10 @@ Provide your feedback below. Include as many details as possible.
 ${params.get('metadata') || ''}
 			`.trim());
 
-			const url = `https://github.com/sindresorhus/Gifski/issues/new?${searchParams}`;
+			const url = `${repoUrl}/issues/new?${searchParams}`;
 
 			$('#additional-info').show().html(`
-				If you're on GitHub, <a href="${url}">open an issue on the repo</a> instead.
+				If you have a GitHub user, <a href="${url}">open an issue on the repo</a> instead.
 			`);
 		}
 	}
