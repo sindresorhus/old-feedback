@@ -47,7 +47,8 @@ a {
 
 h1,
 h2,
-#additional-info {
+#additional-info,
+p {
 	text-align: center;
 }
 
