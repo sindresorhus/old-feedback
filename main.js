@@ -15,13 +15,15 @@ window.sk=window.sk||function(){(sk.q=sk.q||[]).push(arguments)};
 		'Battery Indicator': 'https://sindresorhus.com/assets/battery-indicator/icon.png',
 		'Caprine': 'https://sindresorhus.com/caprine/images/Icon.png',
 		'Blear': 'https://sindresorhus.com/assets/blear/icon.png',
-		'Plash': 'https://sindresorhus.com/assets/plash/icon.png'
+		'Plash': 'https://sindresorhus.com/assets/plash/icon.png',
+		'Pasteboard Viewer': 'https://sindresorhus.com/assets/pasteboard-viewer/icon.png'
 	};
 
 	const repoUrls = {
 		'Gifski': 'https://github.com/sindresorhus/Gifski',
 		'Shareful': 'https://github.com/sindresorhus/Shareful',
-		'Plash': 'https://github.com/sindresorhus/Plash'
+		'Plash': 'https://github.com/sindresorhus/Plash',
+		'Pasteboard Viewer': 'https://github.com/sindresorhus/Pasteboard-Viewer'
 	};
 
 	// Borrow the navbar from the main site
