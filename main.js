@@ -16,7 +16,8 @@ window.sk=window.sk||function(){(sk.q=sk.q||[]).push(arguments)};
 		'Caprine': 'https://sindresorhus.com/caprine/images/Icon.png',
 		'Blear': 'https://sindresorhus.com/assets/blear/icon.png',
 		'Plash': 'https://sindresorhus.com/assets/plash/icon.png',
-		'Pasteboard Viewer': 'https://sindresorhus.com/assets/pasteboard-viewer/icon.png'
+		'Pasteboard Viewer': 'https://sindresorhus.com/assets/pasteboard-viewer/icon.png',
+		'Jiffy': 'https://sindresorhus.com/assets/jiffy/icon.png'
 	};
 
 	const repoUrls = {
