@@ -45,6 +45,11 @@ a {
 	margin-bottom: 20px;
 }
 
+.ios-app #app-icon {
+	border-radius: 30px;
+	filter: drop-shadow(0px 1px 3px #D5D5D5);
+}
+
 h1,
 h2,
 #additional-info,

@@ -17,15 +17,22 @@ window.sk=window.sk||function(){(sk.q=sk.q||[]).push(arguments)};
 		'Blear': 'https://sindresorhus.com/assets/blear/icon.png',
 		'Plash': 'https://sindresorhus.com/assets/plash/icon.png',
 		'Pasteboard Viewer': 'https://sindresorhus.com/assets/pasteboard-viewer/icon.png',
-		'Jiffy': 'https://sindresorhus.com/assets/jiffy/icon.png'
+		'Jiffy': 'https://sindresorhus.com/assets/jiffy/icon.png',
+		'Recordia': 'https://sindresorhus.com/assets/recordia/icon.png',
+		'Photo Widget': 'https://sindresorhus.com/assets/photo-widget/icon.png'
 	};
 
 	const repoUrls = {
 		'Gifski': 'https://github.com/sindresorhus/Gifski',
-		'Shareful': 'https://github.com/sindresorhus/Shareful',
+		// TODO: Enable this again.
+		// 'Shareful': 'https://github.com/sindresorhus/Shareful',
 		'Plash': 'https://github.com/sindresorhus/Plash',
 		'Pasteboard Viewer': 'https://github.com/sindresorhus/Pasteboard-Viewer'
 	};
+
+	const iOSApps = [
+		'Photo Widget'
+	];
 
 	// Borrow the navbar from the main site
 	$('#nav-container').load('https://sindresorhus.com/contact .hero-head', () => {
@@ -51,6 +58,10 @@ window.sk=window.sk||function(){(sk.q=sk.q||[]).push(arguments)};
 
 		if (icons[product]) {
 			$('#app-icon').css('display', 'flex').attr('src', icons[product]);
+		}
+
+		if (iOSApps.includes(product)) {
+			$(document.body).addClass('ios-app');
 		}
 
 		if (product in repoUrls) {
