@@ -4,20 +4,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Feedback · Sindre Sorhus</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
 		<link rel="stylesheet" href="main.css">
 		<link rel="icon" href="/favicon.png" sizes="32x32">
-		<script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-		<script defer src="https://js.statickit.com/statickit.js"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
 		<script defer src="main.js"></script>
-		<!-- Google Analytics -->
-		<script>
-			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-			ga('create', 'UA-25562592-1', 'auto');
-			ga('send', 'pageview');
-		</script>
-		<script defer src="https://www.google-analytics.com/analytics.js"></script>
-		<!-- / Google Analytics -->
 	</head>
 	<body>
 		<div id="nav-container"></div>
@@ -30,7 +21,8 @@
 							<h1 class="title is-2">Feedback</h1>
 							<h2 class="title is-6">I appreciate your feedback 🙌</h2>
 							<div id="additional-info"></div>
-							<form id="feedback-form">
+							<form id="feedback-form" action="https://formcarry.com/s/UBfgr97yfY" method="POST" enctype="multipart/form-data">
+								<input type="hidden" name="_gotcha">
 								<div class="field">
 									<label class="label" for="name">Name</label>
 									<div class="control">
@@ -42,18 +34,23 @@
 									<div class="control">
 										<input class="input is-medium" type="email" name="email" required>
 									</div>
-									<div data-sk-error="email"></div>
 								</div>
 								<div class="field">
 									<label class="label" for="message">Message*</label>
 									<div class="control">
 										<textarea class="textarea is-medium" placeholder="I'm a human. Please be nice." name="message" minlength="20" rows="7" required autofocus></textarea>
 									</div>
-									<div data-sk-error="message"></div>
 								</div>
 								<div class="field">
+									<label class="label" for="email">Attachments</label>
 									<div class="control">
-										<button class="button is-large is-primary is-info" type="submit">Send Feedback</button>
+										<input type="file" name="attachments" multiple>
+									</div>
+								</div>
+								<br>
+								<div class="field">
+									<div class="control">
+										<button class="button is-medium is-primary is-info" type="submit">Send Feedback</button>
 									</div>
 								</div>
 							</form>

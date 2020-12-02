@@ -1,8 +1,13 @@
 /* eslint-env browser, jquery */
-
-window.sk=window.sk||function(){(sk.q=sk.q||[]).push(arguments)};
-
 (() => {
+	if (window.location.search === '?success') {
+		$('#main').html('<h1 class="title is-2">Thanks for the feedback!</h1><p>You will now be redirected to my website.');
+
+		setTimeout(() => {
+			window.location.href = 'https://sindresorhus.com/apps';
+		}, 3000);
+	}
+
 	const icons = {
 		'Dato': 'https://sindresorhus.com/assets/dato/icon.png',
 		'Gifski': 'https://sindresorhus.com/assets/gifski/icon.png',
@@ -88,6 +93,10 @@ ${params.get('metadata') || ''}
 
 	const form = $('#feedback-form');
 
+	form.append(
+		$(`<input type="hidden" name="timestamp">`).val(Date.now())
+	);
+
 	// Include all the existing search params
 	for (const [key, value] of params) {
 		if (key === 'nameField') {
@@ -116,28 +125,6 @@ ${params.get('metadata') || ''}
 			$(`<input type="hidden" name="${key}">`).val(value)
 		);
 	}
-
-	const getSubject = () => {
-		// Note: Intentionally not using template strings
-		// here as CloudFlare removes space inside them...
-		const product = params.has('product') ? (': ' + params.get('product')) : '';
-		const message = form.find('[name="message"]').val().slice(0, 100);
-		return 'Feedback' + product + ' - ' + message;
-	};
-
-	sk('form', '#feedback-form', {
-		id: '374a60e0f07a',
-		data: {
-			_subject: getSubject
-		},
-		onSuccess() {
-			$('#main').html('<h1 class="title is-2">Thanks for the feedback!</h1><p>You will now be redirected to my website.');
-
-			setTimeout(() => {
-				window.location.href = 'https://sindresorhus.com';
-			}, 3000);
-		}
-	});
 })();
 
 // For the imported navbar
