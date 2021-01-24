@@ -24,7 +24,8 @@
 		'Pasteboard Viewer': 'https://sindresorhus.com/assets/pasteboard-viewer/icon.png',
 		'Jiffy': 'https://sindresorhus.com/assets/jiffy/icon.png',
 		'Recordia': 'https://sindresorhus.com/assets/recordia/icon.png',
-		'Photo Widget': 'https://sindresorhus.com/assets/photo-widget/icon.png'
+		'Photo Widget': 'https://sindresorhus.com/assets/photo-widget/icon.png',
+		'Plug': 'https://sindresorhus.com/assets/plug/icon.png'
 	};
 
 	const repoUrls = {
@@ -32,17 +33,13 @@
 		// TODO: Enable this again.
 		// 'Shareful': 'https://github.com/sindresorhus/Shareful',
 		'Plash': 'https://github.com/sindresorhus/Plash',
-		'Pasteboard Viewer': 'https://github.com/sindresorhus/Pasteboard-Viewer'
+		'Pasteboard Viewer': 'https://github.com/sindresorhus/Pasteboard-Viewer',
+		'Plug': 'https://github.com/wulkano/Plug'
 	};
 
 	const iOSApps = [
 		'Photo Widget'
 	];
-
-	// Borrow the navbar from the main site
-	$('#nav-container').load('https://sindresorhus.com/contact .hero-head', () => {
-		$('#nav-container').toggleClass('visible');
-	});
 
 	// Form validation
 	$('button[type="submit"]').on('click', event => {
@@ -53,6 +50,13 @@
 	});
 
 	const params = new URL(location.href).searchParams;
+
+	if (params.get('product') !== 'Plug') {
+		// Borrow the navbar from the main site
+		$('#nav-container').load('https://sindresorhus.com/contact .hero-head', () => {
+			$('#nav-container').toggleClass('visible');
+		});
+	}
 
 	if (params.has('product')) {
 		const product = params.get('product');
