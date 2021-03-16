@@ -25,7 +25,8 @@
 		'Jiffy': 'https://sindresorhus.com/assets/jiffy/icon.png',
 		'Recordia': 'https://sindresorhus.com/assets/recordia/icon.png',
 		'Photo Widget': 'https://sindresorhus.com/assets/photo-widget/icon.png',
-		'Plug': 'https://sindresorhus.com/assets/plug/icon.png'
+		'Plug': 'https://sindresorhus.com/assets/plug/icon.png',
+		'UTC Time': 'https://sindresorhus.com/assets/utc-time/icon.png'
 	};
 
 	const repoUrls = {
