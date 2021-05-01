@@ -26,7 +26,8 @@
 		'Recordia': 'https://sindresorhus.com/assets/recordia/icon.png',
 		'Photo Widget': 'https://sindresorhus.com/assets/photo-widget/icon.png',
 		'Plug': 'https://sindresorhus.com/assets/plug/icon.png',
-		'UTC Time': 'https://sindresorhus.com/assets/utc-time/icon.png'
+		'UTC Time': 'https://sindresorhus.com/assets/utc-time/icon.png',
+		'System Color Picker': 'https://sindresorhus.com/assets/system-color-picker/icon.png'
 	};
 
 	const repoUrls = {
@@ -35,7 +36,9 @@
 		// 'Shareful': 'https://github.com/sindresorhus/Shareful',
 		'Plash': 'https://github.com/sindresorhus/Plash',
 		'Pasteboard Viewer': 'https://github.com/sindresorhus/Pasteboard-Viewer',
-		'Plug': 'https://github.com/wulkano/Plug'
+		'Plug': 'https://github.com/wulkano/Plug',
+		// TODO: Enable this when it's OSS.
+		'System Color Picker': 'https://github.com/sindresorhus/System-Color-Picker'
 	};
 
 	const iOSApps = [
@@ -99,7 +102,7 @@ ${params.get('metadata') || ''}
 	const form = $('#feedback-form');
 
 	form.append(
-		$(`<input type="hidden" name="timestamp">`).val(Date.now())
+		$('<input type="hidden" name="timestamp">').val(Date.now())
 	);
 
 	// Include all the existing search params
