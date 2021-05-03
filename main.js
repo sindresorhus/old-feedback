@@ -31,6 +31,7 @@
 	};
 
 	const repoUrls = {
+		'Blear': 'https://github.com/sindresorhus/Blear',
 		'Gifski': 'https://github.com/sindresorhus/Gifski',
 		// TODO: Enable this again.
 		// 'Shareful': 'https://github.com/sindresorhus/Shareful',
