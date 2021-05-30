@@ -27,7 +27,8 @@
 		'Photo Widget': 'https://sindresorhus.com/assets/photo-widget/icon.png',
 		'Plug': 'https://sindresorhus.com/assets/plug/icon.png',
 		'UTC Time': 'https://sindresorhus.com/assets/utc-time/icon.png',
-		'System Color Picker': 'https://sindresorhus.com/assets/system-color-picker/icon.png'
+		'System Color Picker': 'https://sindresorhus.com/assets/system-color-picker/icon.png',
+		'Pandan': 'https://sindresorhus.com/assets/pandan/icon.png'
 	};
 
 	const repoUrls = {
