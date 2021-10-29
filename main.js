@@ -28,19 +28,18 @@
 		'Plug': 'https://sindresorhus.com/assets/plug/icon.png',
 		'UTC Time': 'https://sindresorhus.com/assets/utc-time/icon.png',
 		'System Color Picker': 'https://sindresorhus.com/assets/system-color-picker/icon.png',
-		'Pandan': 'https://sindresorhus.com/assets/pandan/icon.png'
+		'Pandan': 'https://sindresorhus.com/assets/pandan/icon.png',
+		'Actions': 'https://sindresorhus.com/assets/actions/icon.png'
 	};
 
 	const repoUrls = {
 		'Blear': 'https://github.com/sindresorhus/Blear',
 		'Gifski': 'https://github.com/sindresorhus/Gifski',
-		// TODO: Enable this again.
-		// 'Shareful': 'https://github.com/sindresorhus/Shareful',
 		'Plash': 'https://github.com/sindresorhus/Plash',
 		'Pasteboard Viewer': 'https://github.com/sindresorhus/Pasteboard-Viewer',
 		'Plug': 'https://github.com/wulkano/Plug',
-		// TODO: Enable this when it's OSS.
-		'System Color Picker': 'https://github.com/sindresorhus/System-Color-Picker'
+		'System Color Picker': 'https://github.com/sindresorhus/System-Color-Picker',
+		'Actions': 'https://github.com/sindresorhus/Actions'
 	};
 
 	const iOSApps = [
