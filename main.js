@@ -109,11 +109,6 @@ ${params.get('metadata') || ''}
 
 	// Include all the existing search params
 	for (const [key, value] of params) {
-		if (key === 'nameField') {
-			form.find('[name="name"]').val(value);
-			continue;
-		}
-
 		if (key === 'emailField') {
 			form.find('[name="email"]').val(value);
 			continue;
