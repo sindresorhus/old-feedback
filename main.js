@@ -30,7 +30,8 @@
 		'System Color Picker': 'https://sindresorhus.com/assets/system-color-picker/icon.png',
 		'Pandan': 'https://sindresorhus.com/assets/pandan/icon.png',
 		'Actions': 'https://sindresorhus.com/assets/actions/icon.png',
-		'Speediness': 'https://sindresorhus.com/assets/speediness/icon.png'
+		'Speediness': 'https://sindresorhus.com/assets/speediness/icon.png',
+		'One Thing': 'https://sindresorhus.com/assets/one-thing/icon.png'
 	};
 
 	const repoUrls = {
