@@ -31,7 +31,9 @@
 		'Pandan': 'https://sindresorhus.com/assets/pandan/icon.png',
 		'Actions': 'https://sindresorhus.com/assets/actions/icon.png',
 		'Speediness': 'https://sindresorhus.com/assets/speediness/icon.png',
-		'One Thing': 'https://sindresorhus.com/assets/one-thing/icon.png'
+		'One Thing': 'https://sindresorhus.com/assets/one-thing/icon.png',
+		'Pure Paste': 'https://sindresorhus.com/assets/pure-paste/icon.png',
+		'Folder Peek': 'https://sindresorhus.com/assets/folder-peek/icon.png'
 	};
 
 	const repoUrls = {
