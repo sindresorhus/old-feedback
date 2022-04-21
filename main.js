@@ -33,7 +33,8 @@
 		'Speediness': 'https://sindresorhus.com/assets/speediness/icon.png',
 		'One Thing': 'https://sindresorhus.com/assets/one-thing/icon.png',
 		'Pure Paste': 'https://sindresorhus.com/assets/pure-paste/icon.png',
-		'Folder Peek': 'https://sindresorhus.com/assets/folder-peek/icon.png'
+		'Folder Peek': 'https://sindresorhus.com/assets/folder-peek/icon.png',
+		'Velja': 'https://sindresorhus.com/assets/velja/icon.png'
 	};
 
 	const repoUrls = {
@@ -69,7 +70,7 @@
 
 	if (params.has('product')) {
 		const product = params.get('product');
-		const title = `Feedback for ${product}`;
+		const title = `Feedback & Support for ${product}`;
 
 		$('#main h1').text(title);
 		$('title').text(title);
