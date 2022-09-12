@@ -34,7 +34,9 @@
 		'One Thing': 'https://sindresorhus.com/assets/one-thing/icon.png',
 		'Pure Paste': 'https://sindresorhus.com/assets/pure-paste/icon.png',
 		'Folder Peek': 'https://sindresorhus.com/assets/folder-peek/icon.png',
-		'Velja': 'https://sindresorhus.com/assets/velja/icon.png'
+		'Velja': 'https://sindresorhus.com/assets/velja/icon.png',
+		'Favorites Widget': 'https://sindresorhus.com/assets/favorites-widget/icon.png',
+		'Lock Screen One': 'https://sindresorhus.com/assets/lock-screen-one/icon.png'
 	};
 
 	const repoUrls = {
@@ -48,7 +50,9 @@
 	};
 
 	const iOSApps = [
-		'Photo Widget'
+		'Photo Widget',
+		'Favorites Widget',
+		'Lock Screen One'
 	];
 
 	// Form validation
