@@ -36,7 +36,8 @@
 		'Folder Peek': 'https://sindresorhus.com/assets/folder-peek/icon.png',
 		'Velja': 'https://sindresorhus.com/assets/velja/icon.png',
 		'Favorites Widget': 'https://sindresorhus.com/assets/favorites-widget/icon.png',
-		'Lock Screen One': 'https://sindresorhus.com/assets/lock-screen-one/icon.png'
+		'Lock Screen One': 'https://sindresorhus.com/assets/lock-screen-one/icon.png',
+		'Quick Launch': 'https://sindresorhus.com/assets/quick-launch/icon.png'
 	};
 
 	const repoUrls = {
@@ -52,7 +53,8 @@
 	const iOSApps = [
 		'Photo Widget',
 		'Favorites Widget',
-		'Lock Screen One'
+		'Lock Screen One',
+		'Quick Launch'
 	];
 
 	// Form validation
